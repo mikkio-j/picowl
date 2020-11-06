@@ -9781,18 +9781,6 @@ react-masonry-component@^6.2.1:
     masonry-layout "^4.2.0"
     prop-types "^15.5.8"
 
-react-masonry-css@^1.0.14:
-  version "1.0.14"
-  resolved "https://registry.yarnpkg.com/react-masonry-css/-/react-masonry-css-1.0.14.tgz#2ac1ca7bb2c7e96826f7da3accc9e95ae12b2f65"
-  integrity sha512-oAPVOCMApTT0HkxZJy84yU1EWaaQNZnJE0DjDMy/L+LxZoJEph4RRXsT9ppPKbFSo/tCzj+cCLwiBHjZmZ2eXA==
-
-react-on-images-loaded@^2.2.5:
-  version "2.2.5"
-  resolved "https://registry.yarnpkg.com/react-on-images-loaded/-/react-on-images-loaded-2.2.5.tgz#177d2f064ce647b248e59fc4af3250f81de70c0e"
-  integrity sha512-9p5hDxBBpyl/Z6RgJNZipnswUFzX/QfMaEHAioSfZy/hm8iFlxoBchuXqqdZlRxQ6Xd2HPR3hAusB+6yeM0cXA==
-  dependencies:
-    prop-types "^15.6.2"
-
 react-redux@^7.2.2:
   version "7.2.2"
   resolved "https://registry.yarnpkg.com/react-redux/-/react-redux-7.2.2.tgz#03862e803a30b6b9ef8582dadcc810947f74b736"

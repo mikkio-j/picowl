@@ -6,7 +6,7 @@ import { clearPopupAction } from '../../redux/actions/popup';
 
 const StyledWrapper = styled.div`
   position: fixed;
-  top: 70px;
+  top: 40px;
   left: 50%;
   width: 95%;
   max-width: 800px;

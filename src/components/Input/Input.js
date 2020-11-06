@@ -185,7 +185,7 @@ const Input = ({
         <StyledCompleteBlock altInput={altInput} ref={autoCompleteContainer}>
           {keywords.length > 0 ? (
             keywords.map((item) => (
-              <Link to={`../search/${item}`}>
+              <Link key={item} to={`../search/${item}`}>
                 <p>{item}</p>
               </Link>
             ))
@@ -201,8 +201,8 @@ const Input = ({
 Input.propTypes = {
   autoCompleteAction: PropTypes.func.isRequired,
   autoComplete: PropTypes.object.isRequired,
-  keywords: PropTypes.array.isRequired,
-  loaded: PropTypes.bool.isRequired,
+  keywords: PropTypes.array,
+  loaded: PropTypes.bool,
   altInput: PropTypes.bool,
   placeholder: PropTypes.string.isRequired,
   history: PropTypes.object,
