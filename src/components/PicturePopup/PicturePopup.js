@@ -39,9 +39,9 @@ const StyledWrapper = styled.div`
 const StyledImage = styled.div`
   width: 100%;
   height: 95%;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
-  background-position: center 0;
+  background-position: center center;
   background-image: url(${({ image }) => image});
 `;
 const StyledProfileImage = styled.div`
@@ -63,17 +63,14 @@ const StyledIcon = styled.i`
   position: absolute;
   top: 10px;
   right: 10px;
-  font-size: 30px;
-  color: white;
+  font-size: 20px;
+  color: #413d51;
   cursor: pointer;
-  background-color: #413d51;
   padding: 3px 7px;
   border-radius: 6px;
-  transition: 0.1s;
-  border: 3px solid #413d51;
+  transition: 0.3s;
   &:hover {
-    color: #413d51;
-    background-color: #fefefe;
+    transform: rotate(-90deg);
   }
 `;
 const StyledBackground = styled.div`
