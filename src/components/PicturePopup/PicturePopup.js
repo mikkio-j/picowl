@@ -24,6 +24,8 @@ const StyledWrapper = styled.div`
     display: flex;
     align-items: center;
     padding: 0 20px 10px;
+    background-color: #efefef;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
   }
   p {
     font-family: 'Source Sans Pro', sans-serif;
@@ -38,7 +40,7 @@ const StyledWrapper = styled.div`
 
 const StyledImage = styled.div`
   width: 100%;
-  height: 95%;
+  height: 92%;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
@@ -85,7 +87,7 @@ const StyledBackground = styled.div`
 `;
 const PicturePopup = ({ image, clearPopupAction }) => (
   <>
-    <StyledBackground />
+    <StyledBackground onClick={() => clearPopupAction()} />
     <StyledWrapper>
       <StyledIcon className='fas fa-times' onClick={() => clearPopupAction()} />
       <StyledImage image={image && image.urls.regular} />

@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+// Owl Illustration comes from https://illlustrations.co/
 import Logo from '../../assets/Logo.svg';
-import LogoAlt from '../../assets/Logo_alt.svg';
+// import LogoAlt from '../../assets/Logo_alt.svg';
 
 const StyledLogo = styled.div`
   margin: 20px auto;
@@ -11,9 +12,6 @@ const StyledLogo = styled.div`
   background-size: contain;
   background-repeat: no-repeat;
   transition: 0.3s;
-  &:hover {
-    background-image: url(${LogoAlt});
-  }
 `;
 
 export default StyledLogo;
