@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
 import Masonry from 'react-masonry-component';
+import useEventListener from '@use-it/event-listener';
 import { searchPhotosAction } from '../redux/actions/searchPhotos';
 import { popupAction } from '../redux/actions/popup';
 import PicturePopup from '../components/PicturePopup/PicturePopup';
@@ -80,7 +81,7 @@ const SearchView = ({
 }) => {
   const [tags, setTags] = useState([]);
   const [loaded, setLoaded] = useState(0);
-
+  const [fetchedPagesCount, setfetchedPagesCount] = useState(2);
   useEffect(() => {
     searchPhotosAction(match.params.searchString, 1);
     setTags(keywords);
@@ -103,6 +104,12 @@ const SearchView = ({
     fitWidth: true,
   };
 
+  useEventListener('scroll', () => {
+    if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+      searchPhotosAction(match.params.searchString, fetchedPagesCount);
+      setfetchedPagesCount(fetchedPagesCount + 1);
+    }
+  });
   return (
     <>
       {popup.show && <PicturePopup image={popup.item} />}

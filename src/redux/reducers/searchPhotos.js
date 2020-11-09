@@ -1,5 +1,6 @@
 import {
   FETCH_PHOTOS,
+  FETCH_MORE_PHOTOS,
   CLEAR_FETCH_PHOTOS,
   ERROR_FETCH_PHOTOS,
 } from '../actions/types';
@@ -12,6 +13,8 @@ export default function (state = initialState, action) {
   switch (type) {
     case FETCH_PHOTOS:
       return { photos: payload, loaded: true };
+    case FETCH_MORE_PHOTOS:
+      return { photos: [...state.photos, ...payload], loaded: true };
     case CLEAR_FETCH_PHOTOS:
       return { photos: [], loaded: false };
     case ERROR_FETCH_PHOTOS:
